@@ -19,23 +19,23 @@ export default function Hero(props: HeroProps) {
       }`}
     >
       <div
-        className={`lg:max-h-screen max-w-[1080px] relative lg:min-h-[720px]`}
+        className={`w-screen h-screen flex relative lg:min-h-[720px] items-center`}
       >
-        <Image
-          src={props.Image}
-          alt={props.Alt}
-          className={`${props.Filter ? "grayscale" : null}`}
-        />
-        {props.Header || props.EmphasizedHeader ? (
-          <div className="flex flex-col items-center absolute left-0 top-1/4 md:top-1/2 bg-black/70 py-xl px-lg">
-            <h2 className="text-4xl md:text-6xl text-white">
-              {props.Header} {props.Header ? <br /> : null}
-              <span className="text-primary text-5xl md:text-7xl font-bold text-white">
-                {props.EmphasizedHeader}
-              </span>
-            </h2>
-          </div>
-        ) : null}
+        <div className=" items-center bg-black/70 z-10 relative h-fit p-6 rounded-full border">
+          <h2 className="text-4xl md:text-6xl text-white pl-6 pr-24">
+            {props.Header} <br />
+            <span className="text-primary text-5xl md:text-7xl font-bold text-white">
+              {props.EmphasizedHeader}
+            </span>
+          </h2>
+        </div>
+        <div className="absolute top-0 right-0 w-full h-full z-1">
+          <Image
+            src={props.Image}
+            alt={props.Alt}
+            className={`${props.Filter ? "grayscale" : null}`}
+          />
+        </div>
       </div>
     </div>
   );

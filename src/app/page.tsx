@@ -1,15 +1,18 @@
-import Video from "./components/video";
 import Header from "./components/header";
+import Hero from "./components/hero";
+import HeroImage from "./public/hero-image.jpg";
+import LogoImage from "./public/logo.svg";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
-      <div className="px-4xl">
-        <div className="relative min-h-full min-w-full">
-          <div className="absolute"></div>
-        </div>
-      </div>
+      <Header Logo={LogoImage} />
+      <Hero
+        Image={HeroImage}
+        Alt="Hero Image"
+        Header="Designed for"
+        EmphasizedHeader="Results"
+      />
     </div>
   );
 }
