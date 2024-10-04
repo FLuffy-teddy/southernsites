@@ -9,9 +9,9 @@ export default function Video() {
       loop
       autoPlay
     >
-      <source src="/coding-video.mp4" type="video/mp4" />
+      <source src="/coding-video.mov" type="video/mov" />
       <track
-        src="/coding-vdeo.mp4"
+        src="/coding-vdeo.mov"
         kind="subtitles"
         srcLang="en"
         label="English"
