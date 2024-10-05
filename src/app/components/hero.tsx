@@ -13,16 +13,12 @@ interface HeroProps {
 
 export default function Hero(props: HeroProps) {
   return (
-    <div
-      className={`w-full flex justify-center ${
-        props.Background ? "bg-black" : null
-      }`}
-    >
+    <div className={`w-full flex justify-center overflow-hidden`}>
       <div
         className={`w-screen h-screen flex relative lg:min-h-[720px] items-center`}
       >
-        <div className=" items-center bg-black/70 z-10 relative h-fit p-6 rounded-full border">
-          <h2 className="text-4xl md:text-6xl text-white pl-6 pr-24">
+        <div className=" items-center bg-primary/20 z-10 relative h-fit ml-24 rounded-full border">
+          <h2 className="text-4xl md:text-6xl text-white py-6 px-24">
             {props.Header} <br />
             <span className="text-primary text-5xl md:text-7xl font-bold text-white">
               {props.EmphasizedHeader}
