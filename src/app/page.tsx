@@ -5,8 +5,11 @@ import SingleCol from "./components/single-col";
 import { ModeToggle } from "./components/themeswitch";
 import HeroImage from "./public/hero-image.jpg";
 import LogoImage from "./public/logo.svg";
-import FirstFiftyImage from "./public/Own-It.svg";
-import "./json/fifty-json.js";
+import first from "./public/Own-It.svg";
+import second from "./public/SEO.svg";
+import third from "./public/Take-Control.svg";
+import fourth from "./public/Future-Proof.svg";
+import Skills from "./components/skills";
 
 export default function Home() {
   return (
@@ -27,13 +30,40 @@ export default function Home() {
         button={true}
       />
       <Fifty
-        Image={FirstFiftyImage}
+        Image={first}
         Alt="Own It"
         Header="Own It"
         Text="You control the process start to finish, and own the product once we are done."
         SubText="I am here to help you realize your vision for your website."
         Number="1)"
+        Switch={false}
       />
+      <Fifty
+        Image={second}
+        Alt="SEO"
+        Header="SEO"
+        Text="Don't waste time paying for clicks on Facebook. Utilize a great SEO score to push your content to the customers you want."
+        Number="2)"
+        Switch={true}
+      />
+      <Fifty
+        Image={third}
+        Alt="Take Control"
+        Header="Take Control"
+        Text="Tired of drag-and-drop builders constricting what you want?"
+        SubText="With custom code you get exactly what you want and nothing more, keeping you lightweight, fast, and most importantly, giving you what you envision"
+        Number="3)"
+        Switch={false}
+      />
+      <Fifty
+        Image={fourth}
+        Alt="Future Proof"
+        Header="Future Proof"
+        Text="With a website your internet profile exists apart from any social media site, meaning you don't have to jump through their hoops in order to run your business"
+        Number="4)"
+        Switch={true}
+      />
+      <Skills />
 
       <div className="fixed right-5 bottom-5">
         <ModeToggle />

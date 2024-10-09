@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 
 interface fiftyType {
   Switch?: boolean;
-  Image: StaticImageData;
+  Image: string | StaticImageData;
   Alt: string;
   Header: string;
   Text: string;
@@ -12,12 +12,12 @@ interface fiftyType {
 
 export default function Fifty(props: fiftyType) {
   return (
-    <div
-      className={`flex w-screen justify-center items-center ${
-        props.Switch ? " order-1" : ""
-      }`}
-    >
-      <div className="flex gap-4 items-baseline justify-center h-fit">
+    <div className={`flex w-screen justify-center items-center p-24`}>
+      <div
+        className={`flex gap-4 items-baseline justify-center h-fit w-1/2 ${
+          props.Switch ? " order-1" : ""
+        }`}
+      >
         {props.Number ? (
           <h2 className="text-7xl text-primary">{props.Number}</h2>
         ) : null}
@@ -29,7 +29,9 @@ export default function Fifty(props: fiftyType) {
           {props.SubText ? <p className="text-xl">{props.SubText}</p> : null}
         </div>
       </div>
-      <Image src={props.Image} alt={props.Alt} />
+      <div className="w-1/2 flex justify-center">
+        <Image src={props.Image} width={440} height={440} alt={props.Alt} />
+      </div>
     </div>
   );
 }

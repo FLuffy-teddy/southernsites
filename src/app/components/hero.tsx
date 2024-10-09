@@ -30,6 +30,7 @@ export default function Hero(props: HeroProps) {
             src={props.Image}
             alt={props.Alt}
             className={`${props.Filter ? "grayscale" : null}`}
+            placeholder="blur"
           />
         </div>
       </div>
