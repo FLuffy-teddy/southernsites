@@ -10,6 +10,7 @@ import second from "./public/SEO.svg";
 import third from "./public/Take-Control.svg";
 import fourth from "./public/Future-Proof.svg";
 import Skills from "./components/skills";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -64,6 +65,7 @@ export default function Home() {
         Switch={true}
       />
       <Skills />
+      <Contact />
 
       <div className="fixed right-5 bottom-5">
         <ModeToggle />

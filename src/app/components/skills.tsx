@@ -16,9 +16,9 @@ export default function Skills() {
   const FrontEndSkills = [HTML, CSS, JS, React, Node, Next, Tail, Graph];
   const BackEndSkills = [PHP, SQL, Strapi, Mongo];
   return (
-    <div className="flex flex-col justify-center items-center gap-8 py-24">
-      <h2 className="text-4xl">Front-End Skills</h2>
-      <div className="flex justify-between gap-4 pb-24">
+    <div className="flex flex-col gap-8 py-24">
+      <h2 className="text-4xl text-center">Front-End Skills</h2>
+      <div className="flex justify-center gap-8 pb-24">
         {FrontEndSkills.map((item, i) => (
           <Image
             src={item}
@@ -29,8 +29,8 @@ export default function Skills() {
           />
         ))}
       </div>
-      <h2 className="text-4xl">Back-End Skills</h2>
-      <div className="flex justify-between gap-8 pb-24">
+      <h2 className="text-4xl text-center">Back-End Skills</h2>
+      <div className="flex justify-center gap-8 pb-24">
         {BackEndSkills.map((item, i) => (
           <Image
             src={item}
