@@ -9,6 +9,9 @@ export default function Header(props: HeaderProps) {
   return (
     <div className="flex justify-between items-center px-6 fixed top-0 w-screen z-10 bg-background">
       <Image src={props.Logo} alt="Logo" width="63" />
+      <a href="/repo">
+        <Button>See Examples</Button>
+      </a>
       <Button>Contact</Button>
     </div>
   );

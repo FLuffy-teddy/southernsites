@@ -19,7 +19,7 @@ export default function Home() {
       <Hero
         Image={HeroImage}
         Alt="Hero Image"
-        Header="Designed for"
+        Header="Websites with"
         EmphasizedHeader="Results"
       />
       <SingleCol
