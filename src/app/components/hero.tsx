@@ -17,7 +17,7 @@ export default function Hero(props: HeroProps) {
       <div
         className={`w-screen h-screen flex relative lg:min-h-[720px] items-center`}
       >
-        <div className=" items-center bg-primary/20 z-10 relative h-fit ml-24 rounded-full border">
+        <div className=" items-center bg-primary/20 z-10 relative h-fit ml-24 rounded-full border transition-all">
           <h2 className="text-4xl md:text-6xl text-white py-6 px-24">
             {props.Header} <br />
             <span className="text-primary text-5xl md:text-7xl font-bold text-white">

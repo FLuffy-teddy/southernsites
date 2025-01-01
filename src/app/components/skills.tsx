@@ -13,32 +13,50 @@ import Strapi from "../public/strapi.svg";
 import Mongo from "../public/mongodb.svg";
 
 export default function Skills() {
-  const FrontEndSkills = [HTML, CSS, JS, React, Node, Next, Tail, Graph];
-  const BackEndSkills = [PHP, SQL, Strapi, Mongo];
+  const FrontEndSkills = [
+    [HTML, "https://www.w3schools.com/html/"],
+    [CSS, "https://www.w3schools.com/css/"],
+    [JS, "https://www.w3schools.com/js/"],
+    [React, "https://react.dev/"],
+    [Node, "https://nodejs.org/en"],
+    [Next, "https://nextjs.org/"],
+    [Graph, "https://graphql.org/"],
+    [Tail, "https://tailwindcss.com/"],
+  ];
+  const BackEndSkills = [
+    [PHP, "https://www.php.net/"],
+    [SQL, "https://www.w3schools.com/sql/"],
+    [Strapi, "https://strapi.io/"],
+    [Mongo, "https://www.mongodb.com/"],
+  ];
   return (
     <div className="flex flex-col gap-8 py-24">
       <h2 className="text-4xl text-center">Front-End Skills</h2>
       <div className="flex justify-center gap-8 pb-24">
         {FrontEndSkills.map((item, i) => (
-          <Image
-            src={item}
-            alt="Front End Skill"
-            key={i}
-            width={75}
-            height={75}
-          />
+          <a href={item[1]} key={i} target="_blank" rel="noreferrer nofollow">
+            <Image
+              src={item[0]}
+              alt="Front End Skill"
+              width={75}
+              height={75}
+              className="hover:scale-125"
+            />
+          </a>
         ))}
       </div>
       <h2 className="text-4xl text-center">Back-End Skills</h2>
       <div className="flex justify-center gap-8 pb-24">
         {BackEndSkills.map((item, i) => (
-          <Image
-            src={item}
-            alt="Back End Skill"
-            key={i}
-            width={75}
-            height={75}
-          />
+          <a href={item[1]} key={i} target="_blank" rel="noreferrer nofollow">
+            <Image
+              src={item[0]}
+              alt="Back End Skill"
+              width={75}
+              height={75}
+              className="hover:scale-125"
+            />
+          </a>
         ))}
       </div>
     </div>
